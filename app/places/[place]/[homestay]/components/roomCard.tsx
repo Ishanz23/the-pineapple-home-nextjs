@@ -10,6 +10,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import RatesTabContainer from "./ratesTabContainer";
+import RoomCarousel from "./roomCarousel";
 
 type Room = {
   id: string;
@@ -59,35 +60,7 @@ export default function RoomCard({ room }: { room: Room }) {
         </h2>
       </div>
       {/* Carousel */}
-      <Carousel
-        opts={{
-          align: "start",
-        }}
-        className="w-full"
-      >
-        <CarouselContent className="basis-1">
-          {room.roomGallery.map((image) => (
-            <CarouselItem key={image.url} className="">
-              <div className="px-4">
-                <Card>
-                  <CardContent className="flex items-center justify-center p-0 aspect-video">
-                    <Image
-                      src={image.url || ""}
-                      alt={image.description || "Room Gallery Image"}
-                      width={800}
-                      height={200}
-                      priority
-                      className="w-full h-full rounded-lg"
-                    />
-                  </CardContent>
-                </Card>
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        <CarouselPrevious variant={"ghost"} />
-        <CarouselNext variant={"ghost"} />
-      </Carousel>
+      <RoomCarousel images={room.roomGallery} />
       {/* Rates */}
       <div className="p-4">
         <RatesTabContainer rates={room.rates} homestayId={room.homestayId} />

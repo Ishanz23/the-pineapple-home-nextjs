@@ -77,9 +77,15 @@ importers:
       drizzle-orm:
         specifier: ^0.32.0
         version: 0.32.0(@libsql/client@0.6.2(bufferutil@4.0.8)(utf-8-validate@6.0.3))(@neondatabase/serverless@0.9.3)(@types/pg@8.11.6)(@types/react@18.3.3)(@vercel/postgres@0.8.0)(pg@8.12.0)(postgres@3.4.4)(react@18.2.0)
+      embla-carousel:
+        specifier: ^8.1.7
+        version: 8.1.7
       embla-carousel-autoplay:
-        specifier: ^8.1.6
-        version: 8.1.6(embla-carousel@8.1.6)
+        specifier: ^8.1.7
+        version: 8.1.7(embla-carousel@8.1.7)
+      embla-carousel-fade:
+        specifier: ^8.1.7
+        version: 8.1.7(embla-carousel@8.1.7)
       embla-carousel-react:
         specifier: ^8.1.6
         version: 8.1.6(react@18.2.0)
@@ -1656,10 +1662,15 @@ packages:
   electron-to-chromium@1.4.830:
     resolution: {integrity: sha512-TrPKKH20HeN0J1LHzsYLs2qwXrp8TF4nHdu4sq61ozGbzMpWhI7iIOPYPPkxeq1azMT9PZ8enPFcftbs/Npcjg==}
 
-  embla-carousel-autoplay@8.1.6:
-    resolution: {integrity: sha512-e5n9f4q+DVeBPiPPT3gwzqpiqfae8aP8fQACS4OZkPFvFLdsVhnWcw+cwtewryP7snWJGKPXEMA1GOjieEKv+w==}
+  embla-carousel-autoplay@8.1.7:
+    resolution: {integrity: sha512-UXt1XvCNwzC/Sqd7iU8nYd1CjuDLweIwJClfBL3gVTzHQBVwb68GBBfC/oPFsEeIWNUZe8NO5xDQSI9aTnYO7Q==}
     peerDependencies:
-      embla-carousel: 8.1.6
+      embla-carousel: 8.1.7
+
+  embla-carousel-fade@8.1.7:
+    resolution: {integrity: sha512-TAva6nq6Z+VNqa/DGuZyZh5HAmyoVwYHnDehYgeYU+ejj9tSHQF74ccHZWTFtjGtJfzLbYqfz5QWVm5w4C2qBQ==}
+    peerDependencies:
+      embla-carousel: 8.1.7
 
   embla-carousel-react@8.1.6:
     resolution: {integrity: sha512-DHxwFzF63yVrU95Eo58E9Xr5b6Y9ul6TTsqb/rtwMi+jXudAmIqN1i9iBxQ73i8jKuUVxll/ziNYMmnWvrdQJQ==}
@@ -1673,6 +1684,9 @@ packages:
 
   embla-carousel@8.1.6:
     resolution: {integrity: sha512-9n7FVsbPAs1KD+JmO84DnEDOZMXPBQbLujjMQqvsBRN2CDWwgZ9hRSNapztdPnyJfzOIxowGmj0BUQ8ACYAPkA==}
+
+  embla-carousel@8.1.7:
+    resolution: {integrity: sha512-b3kBr2H+S1gx4neki0P+aqN6cA5Ibjqy4CR3Ufi3X+Q3JpoNXJgOmJMSPkoP9DKcDREwADN6UWZzRwF2oo0y9Q==}
 
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
@@ -4451,9 +4465,13 @@ snapshots:
 
   electron-to-chromium@1.4.830: {}
 
-  embla-carousel-autoplay@8.1.6(embla-carousel@8.1.6):
+  embla-carousel-autoplay@8.1.7(embla-carousel@8.1.7):
     dependencies:
-      embla-carousel: 8.1.6
+      embla-carousel: 8.1.7
+
+  embla-carousel-fade@8.1.7(embla-carousel@8.1.7):
+    dependencies:
+      embla-carousel: 8.1.7
 
   embla-carousel-react@8.1.6(react@18.2.0):
     dependencies:
@@ -4466,6 +4484,8 @@ snapshots:
       embla-carousel: 8.1.6
 
   embla-carousel@8.1.6: {}
+
+  embla-carousel@8.1.7: {}
 
   emoji-regex@8.0.0: {}
 
