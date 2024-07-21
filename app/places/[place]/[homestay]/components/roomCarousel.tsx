@@ -23,11 +23,11 @@ export default function RoomCarousel({
         align: "center",
         containScroll: false,
         loop: true,
-        duration: 30,
+        duration: 40,
       }}
       plugins={[
         Autoplay({
-          delay: 5000,
+          delay: 10000,
           stopOnInteraction: false,
           stopOnMouseEnter: true,
         }),

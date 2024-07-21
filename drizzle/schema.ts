@@ -441,6 +441,8 @@ export const rate = sqliteTable(
     type: text("type").notNull().default("B2B"),
     headCount: integer("headCount").notNull(),
     tariff: integer("tariff").notNull(),
+    name: text("name"),
+    description: text("description"),
     refundable: integer("refundable", { mode: "boolean" })
       .notNull()
       .default(true),

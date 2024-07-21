@@ -10,13 +10,11 @@ import { useState } from "react";
 export default function RateCard({
   rate,
   homestayId,
-  pax,
   onRateSelected,
   isRateSelected,
 }: {
   rate: Partial<RateSelect>;
   homestayId: string;
-  pax: number;
   onRateSelected: (rate: Partial<RateSelect> | null | undefined) => void;
   isRateSelected: (rate: Partial<RateSelect>) => boolean;
 }) {
@@ -62,12 +60,9 @@ export default function RateCard({
                   </span>
                 </div>
                 <div className="flex items-center justify-between w-full">
-                  <div className="flex text-primary">
-                    {rate.headCount && (
-                      <PersonsIcon headCount={rate.headCount} />
-                    )}
-                  </div>
+                  <div className="flex text-xs text-primary">{rate.name}</div>
                   <span className="font-bold text-accent">
+                    ₹
                     {(rate.tariff || 0) +
                       foodPlan.tariff * (rate.headCount || 1)}
                     /-

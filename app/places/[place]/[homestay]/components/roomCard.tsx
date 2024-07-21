@@ -33,13 +33,15 @@ export default function RoomCard({ room }: { room: Room }) {
   return (
     <div
       className={cn(
-        "flex flex-col gap-4 md:rounded-lg bg-secondary",
+        "flex flex-col py-4 gap-4 md:rounded-lg bg-secondary",
         `row-span-${room.rates.length}`
       )}
     >
-      <div className="flex flex-col p-4 flex-grow-1">
+      <div className="flex flex-col px-4 flex-grow-1">
         <div className="flex items-center justify-between gap-2">
-          <h1 className="text-lg font-semibold text-primary">{room.name}</h1>
+          <h1 className="text-lg font-semibold capitalize text-primary">
+            {room.name}
+          </h1>
           <div className="flex items-center gap-2">
             <button type="button">
               <i className="material-symbol-outlined text-primary">
@@ -62,7 +64,7 @@ export default function RoomCard({ room }: { room: Room }) {
       {/* Carousel */}
       <RoomCarousel images={room.roomGallery} />
       {/* Rates */}
-      <div className="p-4">
+      <div className="px-4">
         <RatesTabContainer rates={room.rates} homestayId={room.homestayId} />
       </div>
     </div>

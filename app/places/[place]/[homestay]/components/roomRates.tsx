@@ -42,7 +42,6 @@ export default function RoomRates({
               key={rate.id}
               rate={rate}
               homestayId={homestayId}
-              pax={pax}
               isRateSelected={isRateSelected}
               onRateSelected={onRateSelected}
             />

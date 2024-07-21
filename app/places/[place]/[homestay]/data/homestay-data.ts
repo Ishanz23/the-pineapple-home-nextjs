@@ -42,6 +42,8 @@ function getHomestayById(id: string) {
               tariff: true,
               headCount: true,
               refundable: true,
+              name: true,
+              description: true,
             },
           },
           roomGallery: {

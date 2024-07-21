@@ -27,15 +27,16 @@ export default function RatesTabContainer({
             {tabs.map((tab) => (
               <TabsTrigger value={`${tab}`} className="flex-1" key={tab}>
                 <>
-                  <PersonsIcon headCount={1} />
-                  {tab - 1 > 0 && (
+                  <PersonsIcon headCount={tab > 3 ? 3 : tab} />
+                  {/* Badge for count over 2 persons */}
+                  {tab - 3 > 0 && (
                     <div
                       className={cn(
                         "mx-1 px-2 py-1 text-xs font-semibold rounded-full bg-secondary",
                         selectedTab === tab ? "" : "bg-background"
                       )}
                     >
-                      {`+${tab - 1}`}
+                      {`+${tab - 3}`}
                     </div>
                   )}
                 </>
